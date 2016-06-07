@@ -8,12 +8,14 @@ from HTMLCleaner import HTMLCleaner
 from WordsPreprocessor import WordsPreprocessor
 from collections import Counter
 
-words_list = HTMLCleaner().CleanHTMLFromURL("https://en.wikipedia.org/wiki/Glass")
-words_list_processed = WordsPreprocessor().DeleteWordsWithoutMeaning(words_list)
+if __name__ == '__main__':
 
-#print words_list_processed
+    words_list = HTMLCleaner().CleanHTMLFromURL("https://en.wikipedia.org/wiki/Glass")
+    words_list_processed = WordsPreprocessor().DeleteWordsWithoutMeaning(words_list)
 
-#COUNT THE OCURRENCES OF EACH WORD
-doctionary_words = Counter(words_list_processed)
+    #print words_list_processed
 
-print doctionary_words
+    #COUNT THE OCURRENCES OF EACH WORD
+    doctionary_words = Counter(words_list_processed)
+
+    print doctionary_words
