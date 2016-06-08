@@ -16,6 +16,6 @@ if __name__ == '__main__':
     #print words_list_processed
 
     #COUNT THE OCURRENCES OF EACH WORD
-    doctionary_words = Counter(words_list_processed)
+    dictionary_words = Counter(words_list_processed)
 
-    print doctionary_words
+    print dictionary_words
