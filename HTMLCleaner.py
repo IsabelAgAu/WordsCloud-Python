@@ -22,10 +22,11 @@ class HTMLCleaner():
     def GetWordsFromSourceAsOrderedList(self,source):
         words_list = re.findall('[a-zA-Z_]{2,}', source)
         words_list = [x.lower() for x in words_list]
-        return words_list.sort()
+        words_list.sort() 
+        return words_list
 
 
     def CleanHTMLFromURL(self,url):
         source = self.GetPageSource(url)
         words = self.DeleteHTMLTags(source)
-        return self.GetWordsFromSourceAsOrderedList(words)
+        return self.GetWordsFromSourceAsOrderedList(words) 

@@ -13,8 +13,6 @@ if __name__ == '__main__':
     words_list = HTMLCleaner().CleanHTMLFromURL("https://en.wikipedia.org/wiki/Glass")
     words_list_processed = WordsPreprocessor().DeleteWordsWithoutMeaning(words_list)
 
-    #print words_list_processed
-
     #COUNT THE OCURRENCES OF EACH WORD
     dictionary_words = Counter(words_list_processed)
 
