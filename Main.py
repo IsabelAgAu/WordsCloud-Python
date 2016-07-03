@@ -6,6 +6,7 @@ Created on 7 de jun. de 2016
 
 from HTMLCleaner import HTMLCleaner
 from WordsPreprocessor import WordsPreprocessor
+from HTMLGenerator import HTMLGenerator
 from collections import Counter
 
 if __name__ == '__main__':
@@ -15,5 +16,9 @@ if __name__ == '__main__':
 
     #COUNT THE OCURRENCES OF EACH WORD
     dictionary_words = Counter(words_list_processed)
+    
+    html = HTMLGenerator().GenerateFinalHTML(dictionary_words, "WORD CLOUD")
 
-    print dictionary_words
+    html_file = open('word_cloud.html', 'w+')
+    html_file.write(html)
+    html_file.close()

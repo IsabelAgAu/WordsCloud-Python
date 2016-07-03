@@ -1,7 +1,7 @@
 '''
 Created on 2 de jul. de 2016
 
-@author: Tenar
+@author: Isabel Aguilar
 '''
 
 class HTMLGenerator(object):
@@ -15,7 +15,7 @@ class HTMLGenerator(object):
     def GenerateHTMLBody(self, dictionary_words):
         html = "<body>"
         for key in dictionary_words.keys():
-            html += "<font size=\"%s\">%s</font>" % (dictionary_words[key], key) 
+            html += "<font size=\"%s\"> %s </font>" % (dictionary_words[key], key) 
         html += "</body>" 
         return html
     

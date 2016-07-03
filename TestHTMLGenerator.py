@@ -19,13 +19,13 @@ class TestHTMLGenerator(unittest.TestCase):
         
     def testGenerateHTMLBody(self):
         html = HTMLGenerator().GenerateHTMLBody(({'dog': 10, 'cat': 5}))
-        expected_html = "<body><font size=\"10\">dog</font><font size=\"5\">cat</font></body>"
+        expected_html = "<body><font size=\"10\"> dog </font><font size=\"5\"> cat </font></body>"
         self.assertEqual(expected_html, html, "")
         
     def testGenerateFinalHTML(self):
         html = HTMLGenerator().GenerateFinalHTML(({'dog': 10, 'cat': 5}), "Testing")
         expected_html = "<!DOCTYPE html><html><HEAD><TITLE>Testing</TITLE></HEAD>"
-        expected_html +="<body><font size=\"10\">dog</font><font size=\"5\">cat</font></body></html>" 
+        expected_html +="<body><font size=\"10\"> dog </font><font size=\"5\"> cat </font></body></html>" 
         self.assertEqual(expected_html, html, "")
 
 if __name__ == "__main__":
